@@ -9,5 +9,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class StatusComponent {
   Date = new Date();
-  // Navi = window.Navigator;
+  Navi = navigator.userAgent;
 }
