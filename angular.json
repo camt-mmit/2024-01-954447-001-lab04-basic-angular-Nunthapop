@@ -3,14 +3,14 @@
   "version": 1,
   "cli": {
     "packageManager": "yarn",
-    "analytics": "eed3cefa-cda7-4931-9dd9-06d315a93fb5",
+    "analytics": false,
     "schematicCollections": [
       "angular-eslint"
     ]
   },
   "newProjectRoot": "projects",
   "projects": {
-    "my-ng": {
+    "week-04": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -25,7 +25,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-ng",
+            "outputPath": "dist/week-04",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [],
@@ -40,7 +40,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -70,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-ng:build:production"
+              "buildTarget": "week-04:build:production"
             },
             "development": {
-              "buildTarget": "my-ng:build:development"
+              "buildTarget": "week-04:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -107,9 +112,6 @@
               "src/**/*.html"
             ]
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
