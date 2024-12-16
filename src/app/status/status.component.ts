@@ -10,4 +10,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class StatusComponent {
   Date = new Date();
   Navi = navigator.userAgent;
+  cookie = navigator.cookieEnabled;
+  agent = navigator.userAgent;
+  max = navigator.maxTouchPoints;
+  lang = navigator.language;
+  logic = navigator.hardwareConcurrency;
 }

@@ -1,4 +1,41 @@
-<p>status works!</p>
-<strong>{{ Date }} </strong>
-<br />
-{{ Navi }}
+<div>
+  <h1>Browser and System Information</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Date</td>
+        <td>{{ Date }}</td>
+      </tr>
+      <tr>
+        <td>Navigator User Agent</td>
+        <td>{{ Navi }}</td>
+      </tr>
+      <tr>
+        <td>Cookies Enabled</td>
+        <td>{{ cookie }}</td>
+      </tr>
+      <tr>
+        <td>User Agent</td>
+        <td>{{ agent }}</td>
+      </tr>
+      <tr>
+        <td>Max Touch Points</td>
+        <td>{{ max }}</td>
+      </tr>
+      <tr>
+        <td>Language</td>
+        <td>{{ lang }}</td>
+      </tr>
+      <tr>
+        <td>Logical Processors</td>
+        <td>{{ logic }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
